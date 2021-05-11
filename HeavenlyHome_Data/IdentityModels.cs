@@ -32,7 +32,15 @@ namespace HeavenlyHome_Data
             return new ApplicationDbContext();
         }
 
-        //Database intiation here
+        
+        public DbSet<FloorPlan> FloorPlans { get; set; }
+        public DbSet<LeasingInfo> LeasingInfos { get; set; }
+        public DbSet<Address> Addresses { get; set; }
+        public DbSet<Resident> Residents { get; set; }
+        public DbSet<Payment> Payments { get; set; }
+        public DbSet<PaymentType> PaymentTypes { get; set; }
+        public DbSet<MaintenanceRequest> MaintenanceRequests { get; set; }
+        public DbSet<Applicant> Applicants { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
