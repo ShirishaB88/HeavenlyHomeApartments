@@ -59,10 +59,20 @@
     <Compile Include="FloorPlanModels\FloorPlanEdit.cs" />
     <Compile Include="FloorPlanModels\FloorPlanListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResidentModels\ResidentCreate.cs" />
+    <Compile Include="ResidentModels\ResidentDetail.cs" />
+    <Compile Include="ResidentModels\ResidentEdit.cs" />
+    <Compile Include="ResidentModels\ResidentListItems.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HeavenlyHome_Data\HeavenlyHome_Data.csproj">
+      <Project>{37A6972B-64A9-4786-94C2-08145F90DFB5}</Project>
+      <Name>HeavenlyHome_Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
