@@ -55,6 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FloorPlanModels\FloorPlanCreate.cs" />
+    <Compile Include="FloorPlanModels\FloorPlanDetail.cs" />
     <Compile Include="FloorPlanModels\FloorPlanListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -65,5 +65,60 @@ namespace HeavenlyHome_Service
                 return query.ToArray();
             }
         }
+        //GET: GetFloorPlansByID
+        public FloorPlanDetail GetFloorPlanByID(int id)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                    .FloorPlans
+                    .Single(e => e.FloorPlanID == id && e.UserID == _userID);
+                return
+                    new FloorPlanDetail
+                    {
+                        FloorPlanID = entity.FloorPlanID,
+                        NoOfBeds = entity.NoOfBeds,
+                        NoOfBaths = entity.NoOfBaths,
+                        AreaInSqFt = entity.AreaInSqFt,
+                        Price = entity.Price,
+                        NoOfGarageSpaces = entity.NoOfGarageSpaces,
+                        Image = entity.Image,
+                        IsAvailable = entity.IsAvailable,
+                        CreatedDate = entity.CreatedDate,
+                        ModifiedDate = entity.ModifiedDate
+                    };
+
+            }
+        }
+        //GET: GetFloorPlansBySpecifications(NoOFBeds,NoOFBaths,ISAvailable,AreaRange,NoOfGarage,PriceRange)
+
+        public FloorPlanDetail GetFloorPlanByAvailability()
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                    .FloorPlans
+                    .FirstOrDefault(e => e.IsAvailable == true);
+                return
+                    new FloorPlanDetail
+                    {
+                        FloorPlanID = entity.FloorPlanID,
+                        NoOfBeds = entity.NoOfBeds,
+                        NoOfBaths = entity.NoOfBaths,
+                        AreaInSqFt = entity.AreaInSqFt,
+                        Price = entity.Price,
+                        NoOfGarageSpaces = entity.NoOfGarageSpaces,
+                        Image = entity.Image,
+                        IsAvailable = entity.IsAvailable,
+                        CreatedDate = entity.CreatedDate,
+                        ModifiedDate = entity.ModifiedDate
+
+                    };
+
+            }
+
+        }
     }
 }

@@ -47,6 +47,14 @@ namespace HeavenlyHomeApartments_WebMVC.Controllers
 
         }
 
+        //Get: FloorPlan/Details/{id}
+        public ActionResult Details(int id)
+        {
+            var service = CreateFloorPlanService();
+            var model = service.GetFloorPlanByID(id);
+            return View(model);
+        }
+
         private FloorPlanService CreateFloorPlanService()
         {
             var userId = Guid.Parse(User.Identity.GetUserId());
