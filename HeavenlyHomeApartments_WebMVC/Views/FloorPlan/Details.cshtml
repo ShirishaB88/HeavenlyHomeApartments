@@ -1,0 +1,98 @@
+﻿@model HeavenlyHome_Models.FloorPlanModels.FloorPlanDetail
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>FloorPlanDetail</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FloorPlanID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FloorPlanID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NoOfBeds)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NoOfBeds)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NoOfBaths)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NoOfBaths)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AreaInSqFt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AreaInSqFt)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NoOfGarageSpaces)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NoOfGarageSpaces)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Image)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Image)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsAvailable)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsAvailable)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ModifiedDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ModifiedDate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new {  id = Model.FloorPlanID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
