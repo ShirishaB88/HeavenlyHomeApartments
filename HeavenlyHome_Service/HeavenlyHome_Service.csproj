@@ -54,11 +54,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FloorPlanService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HeavenlyHome_Data\HeavenlyHome_Data.csproj">
+      <Project>{37a6972b-64a9-4786-94c2-08145f90dfb5}</Project>
+      <Name>HeavenlyHome_Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HeavenlyHome_Models\HeavenlyHome_Models.csproj">
+      <Project>{5a7f52b0-de79-4607-94c2-6e441b1f9724}</Project>
+      <Name>HeavenlyHome_Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
