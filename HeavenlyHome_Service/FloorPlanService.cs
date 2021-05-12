@@ -91,31 +91,169 @@ namespace HeavenlyHome_Service
 
             }
         }
-        //GET: GetFloorPlansBySpecifications(NoOFBeds,NoOFBaths,ISAvailable,AreaRange,NoOfGarage,PriceRange)
 
-        public FloorPlanDetail GetFloorPlanByAvailability()
+        //GET: GetFloorPlansBySpecifications(NoOFBeds,NoOFBaths,ISAvailable,AreaRange,NoOfGarage,PriceRange)
+        //GET All Floor Plans By Availability
+        public IEnumerable<FloorPlanListItem> GetFloorPlanByAvailability()
         {
             using (var ctx = new ApplicationDbContext())
             {
-                var entity =
+                var query =
                     ctx
                     .FloorPlans
-                    .FirstOrDefault(e => e.IsAvailable == true);
-                return
-                    new FloorPlanDetail
+                    .Where(e => e.IsAvailable == true)
+                    .Select(e => new FloorPlanListItem
                     {
-                        FloorPlanID = entity.FloorPlanID,
-                        NoOfBeds = entity.NoOfBeds,
-                        NoOfBaths = entity.NoOfBaths,
-                        AreaInSqFt = entity.AreaInSqFt,
-                        Price = entity.Price,
-                        NoOfGarageSpaces = entity.NoOfGarageSpaces,
-                        Image = entity.Image,
-                        IsAvailable = entity.IsAvailable,
-                        CreatedDate = entity.CreatedDate,
-                        ModifiedDate = entity.ModifiedDate
+                        FloorPlanID = e.FloorPlanID,
+                        NoOfBaths = e.NoOfBaths,
+                        NoOfBeds = e.NoOfBeds,
+                        AreaInSqFt = e.AreaInSqFt,
+                        Price = e.Price,
+                        NoOfGarageSpaces = e.NoOfGarageSpaces,
+                        Image = e.Image,
+                        IsAvailable = e.IsAvailable,
+                        CreatedDate = e.CreatedDate
 
-                    };
+                    });
+                return query.ToList();
+
+            }
+
+        }
+
+        //GET All Floor Plans By Number of Beds Given
+        public IEnumerable<FloorPlanListItem> GetFloorPlanByBeds(int noOfBeds)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var query =
+                    ctx
+                    .FloorPlans
+                    .Where(e => e.NoOfBeds == noOfBeds)
+                    .Select(e => new FloorPlanListItem
+                    {
+                        FloorPlanID = e.FloorPlanID,
+                        NoOfBaths = e.NoOfBaths,
+                        NoOfBeds = e.NoOfBeds,
+                        AreaInSqFt = e.AreaInSqFt,
+                        Price = e.Price,
+                        NoOfGarageSpaces = e.NoOfGarageSpaces,
+                        Image = e.Image,
+                        IsAvailable = e.IsAvailable,
+                        CreatedDate = e.CreatedDate
+
+                    });
+                return query.ToList();
+
+            }
+        }
+
+        //GET All Floor Plans By Number of Bath Given
+        public IEnumerable<FloorPlanListItem> GetFloorPlansByBaths(int noOfBaths)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var query =
+                    ctx
+                    .FloorPlans
+                    .Where(e => e.NoOfBeds == noOfBaths)
+                    .Select(e => new FloorPlanListItem
+                    {
+                        FloorPlanID = e.FloorPlanID,
+                        NoOfBaths = e.NoOfBaths,
+                        NoOfBeds = e.NoOfBeds,
+                        AreaInSqFt = e.AreaInSqFt,
+                        Price = e.Price,
+                        NoOfGarageSpaces = e.NoOfGarageSpaces,
+                        Image = e.Image,
+                        IsAvailable = e.IsAvailable,
+                        CreatedDate = e.CreatedDate
+
+                    });
+                return query.ToList();
+
+            }
+        }
+        //GET All Floor Plans By Area Range
+
+        public IEnumerable<FloorPlanListItem> GetFloorPlanByAreaRange(int minArea, int maxArea)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var query =
+                    ctx
+                    .FloorPlans
+                    .Where(e => e.AreaInSqFt >= minArea && e.AreaInSqFt <= maxArea)
+                    .Select(e => new FloorPlanListItem
+                    {
+                        FloorPlanID = e.FloorPlanID,
+                        NoOfBaths = e.NoOfBaths,
+                        NoOfBeds = e.NoOfBeds,
+                        AreaInSqFt = e.AreaInSqFt,
+                        Price = e.Price,
+                        NoOfGarageSpaces = e.NoOfGarageSpaces,
+                        Image = e.Image,
+                        IsAvailable = e.IsAvailable,
+                        CreatedDate = e.CreatedDate
+
+                    });
+                return query.ToList();
+
+            }
+
+        }
+
+        //GET All Floor Plans By Price Range
+        public IEnumerable<FloorPlanListItem> GetFloorPlanByPriceRange(int minPrice, int maxPrice)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var query =
+                    ctx
+                    .FloorPlans
+                    .Where(e => e.Price >= minPrice && e.AreaInSqFt <= maxPrice)
+                    .Select(e => new FloorPlanListItem
+                    {
+                        FloorPlanID = e.FloorPlanID,
+                        NoOfBaths = e.NoOfBaths,
+                        NoOfBeds = e.NoOfBeds,
+                        AreaInSqFt = e.AreaInSqFt,
+                        Price = e.Price,
+                        NoOfGarageSpaces = e.NoOfGarageSpaces,
+                        Image = e.Image,
+                        IsAvailable = e.IsAvailable,
+                        CreatedDate = e.CreatedDate
+
+                    });
+                return query.ToList();
+
+            }
+
+        }
+
+        //GET All Floor Plans By Number of Garage Spaces
+        public IEnumerable<FloorPlanListItem> GetFloorPlanByGarageSpaces(int noOfGarageSpaces)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var query =
+                    ctx
+                    .FloorPlans
+                    .Where(e => e.NoOfGarageSpaces == noOfGarageSpaces)
+                    .Select(e => new FloorPlanListItem
+                    {
+                        FloorPlanID = e.FloorPlanID,
+                        NoOfBaths = e.NoOfBaths,
+                        NoOfBeds = e.NoOfBeds,
+                        AreaInSqFt = e.AreaInSqFt,
+                        Price = e.Price,
+                        NoOfGarageSpaces = e.NoOfGarageSpaces,
+                        Image = e.Image,
+                        IsAvailable = e.IsAvailable,
+                        CreatedDate = e.CreatedDate
+
+                    });
+                return query.ToList();
 
             }
 

@@ -8,5 +8,6 @@ namespace HeavenlyHome_Service
 {
     public class ResidentService
     {
+
     }
 }
