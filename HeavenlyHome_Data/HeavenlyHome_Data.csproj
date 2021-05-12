@@ -60,6 +60,11 @@
     <Compile Include="IdentityModels.cs" />
     <Compile Include="LeasingInfo.cs" />
     <Compile Include="MaintenanceRequest.cs" />
+    <Compile Include="Migrations\202105121415033_initialmigration.cs" />
+    <Compile Include="Migrations\202105121415033_initialmigration.Designer.cs">
+      <DependentUpon>202105121415033_initialmigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Payment.cs" />
     <Compile Include="PaymentType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -68,6 +73,11 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202105121415033_initialmigration.resx">
+      <DependentUpon>202105121415033_initialmigration.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

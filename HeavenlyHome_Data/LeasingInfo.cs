@@ -19,16 +19,6 @@ namespace HeavenlyHome_Data
 
         public Resident Resident { get; set; }
 
-        [ForeignKey(nameof(Address))]
-        public int AddressID { get; set; }
-
-        public Address Address { get; set; }
-
-        [ForeignKey(nameof(FloorPlan))]
-        public int FloorPlanID { get; set; }
-
-        public FloorPlan FloorPlan { get; set; }
-
         [Required]
         public int LeaseTerm { get; set; }
 
