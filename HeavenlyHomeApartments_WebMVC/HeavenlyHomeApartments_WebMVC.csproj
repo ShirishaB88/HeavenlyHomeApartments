@@ -236,15 +236,18 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\FloorPlan\Index.cshtml" />
     <Content Include="Views\FloorPlan\Create.cshtml" />
     <Content Include="Views\FloorPlan\Details.cshtml" />
     <Content Include="Views\FloorPlan\Edit.cshtml" />
     <Content Include="Views\FloorPlan\Delete.cshtml" />
+    <Content Include="Views\Resident\Index.cshtml" />
+    <Content Include="Views\FloorPlan\Index.cshtml" />
+    <Content Include="Views\Resident\Create.cshtml" />
+    <Content Include="Views\Resident\Details.cshtml" />
+    <Content Include="Views\Resident\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Resident\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
