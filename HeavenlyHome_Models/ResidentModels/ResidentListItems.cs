@@ -24,6 +24,6 @@ namespace HeavenlyHome_Models.ResidentModels
         public int PhoneNumber { get; set; }
 
         [DataType(DataType.EmailAddress)]
-        public int EmailAddress { get; set; }
+        public string EmailAddress { get; set; }
     }
 }

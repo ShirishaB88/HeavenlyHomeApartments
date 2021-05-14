@@ -39,11 +39,13 @@ namespace HeavenlyHomeApartments_WebMVC.Controllers
             var service = CreateFloorPlanService();
             if (service.CreateFloorPlan(model))
             {
-                TempData["SaveResult"] = "Your Floor plan was created!"; // Temp Data removes information after it's accessed.
+                TempData["SaveResult"] = "New Floor plan was created!"; // Temp Data removes information after it's accessed.
                 return RedirectToAction("Index");
             }
+
+            ModelState.AddModelError("", "FloorPlan can not be created");
             
-            return RedirectToAction("Index");
+            return View(model);
 
         }
 
@@ -76,7 +78,7 @@ namespace HeavenlyHomeApartments_WebMVC.Controllers
             return View(model);
         }
 
-        //Post: FloorPlan/Edit/{id}
+        //Post: FloorPlan/Edit/{id},{FloorPlanEditModel}
        [HttpPost]
        [ValidateAntiForgeryToken]
        public ActionResult Edit(int id, FloorPlanEdit model)

@@ -3,7 +3,7 @@ namespace HeavenlyHome_Data.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class initialmigration : DbMigration
+    public partial class InitialMigration : DbMigration
     {
         public override void Up()
         {
@@ -12,6 +12,7 @@ namespace HeavenlyHome_Data.Migrations
                 c => new
                     {
                         AddressID = c.Int(nullable: false, identity: true),
+                        UserID = c.Guid(nullable: false),
                         FloorPlanID = c.Int(nullable: false),
                         FullAddress = c.String(nullable: false, maxLength: 1000),
                         IsAvailable = c.Boolean(nullable: false),
@@ -73,10 +74,11 @@ namespace HeavenlyHome_Data.Migrations
                 c => new
                     {
                         ResidentID = c.Int(nullable: false, identity: true),
+                        UserID = c.Guid(nullable: false),
                         AddressID = c.Int(nullable: false),
                         FullName = c.String(),
                         PhoneNumber = c.Int(nullable: false),
-                        EmailAddress = c.Int(nullable: false),
+                        EmailAddress = c.String(),
                     })
                 .PrimaryKey(t => t.ResidentID)
                 .ForeignKey("dbo.Address", t => t.AddressID, cascadeDelete: true)
@@ -87,6 +89,7 @@ namespace HeavenlyHome_Data.Migrations
                 c => new
                     {
                         RequestID = c.Int(nullable: false, identity: true),
+                        UserID = c.Guid(nullable: false),
                         ResidentID = c.Int(nullable: false),
                         Category = c.String(nullable: false),
                         SubCategory = c.String(),
@@ -105,6 +108,7 @@ namespace HeavenlyHome_Data.Migrations
                 c => new
                     {
                         PaymentID = c.Int(nullable: false, identity: true),
+                        UserID = c.Guid(nullable: false),
                         ResidentID = c.Int(nullable: false),
                         PaymentTypeID = c.Int(nullable: false),
                         Rent = c.Double(nullable: false),

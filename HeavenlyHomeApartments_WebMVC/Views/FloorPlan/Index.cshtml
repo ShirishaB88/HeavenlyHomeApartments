@@ -9,7 +9,6 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-
 @if (TempData.ContainsKey("SaveResult"))
 {
     <div class="alert alert-success fade in" role="alert">
@@ -46,6 +45,9 @@
         <th>
             @Html.DisplayNameFor(model => model.IsAvailable)
         </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreatedDate)
+        </th>
         <th></th>
     </tr>
 
@@ -77,8 +79,11 @@
                 @Html.DisplayFor(modelItem => item.IsAvailable)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { id=item.FloorPlanID }) |
-                @Html.ActionLink("Details", "Details", new { id=item.FloorPlanID}) |
+                @Html.DisplayFor(modelItem => item.CreatedDate)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.FloorPlanID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.FloorPlanID }) |
                 @Html.ActionLink("Delete", "Delete", new { id = item.FloorPlanID })
             </td>
         </tr>

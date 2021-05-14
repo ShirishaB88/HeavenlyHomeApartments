@@ -13,6 +13,8 @@ namespace HeavenlyHome_Data
         [Key]
         public int ResidentID { get; set; }
 
+        public Guid UserID { get; set; }
+
         [ForeignKey(nameof(Address))]
         public int AddressID { get; set; }
 
@@ -24,6 +26,6 @@ namespace HeavenlyHome_Data
         public int PhoneNumber { get; set; }
 
         [DataType(DataType.EmailAddress)]
-        public int EmailAddress { get; set; }
+        public string EmailAddress { get; set; }
     }
 }
