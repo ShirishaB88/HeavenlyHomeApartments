@@ -112,6 +112,7 @@ namespace HeavenlyHome_Service
 
                 return new ResidentDetail
                 {
+                    ResidentID = entity.ResidentID,
                     AddressID = entity.AddressID,
                     FullName = entity.FullName,
                     PhoneNumber = entity.PhoneNumber,

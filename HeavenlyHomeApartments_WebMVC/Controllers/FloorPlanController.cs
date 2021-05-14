@@ -99,7 +99,7 @@ namespace HeavenlyHomeApartments_WebMVC.Controllers
                 return RedirectToAction("Index"); 
             }
             ModelState.AddModelError("", " Floorplan could not be updated");
-            return View();
+            return View(model);
         
        }
 

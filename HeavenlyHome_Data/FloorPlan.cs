@@ -16,6 +16,9 @@ namespace HeavenlyHome_Data
         public Guid UserID { get; set; }
 
         [Required]
+        public string FloorPlanName { get; set; }
+
+        [Required]
         public int NoOfBeds { get; set; }
 
         [Required]

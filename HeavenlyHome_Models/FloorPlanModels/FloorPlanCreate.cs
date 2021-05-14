@@ -10,6 +10,9 @@ namespace HeavenlyHome_Models.FloorPlanModels
     public class FloorPlanCreate
     {
         [Required]
+        public string FloorPlanName { get; set; }
+
+        [Required]
         public int NoOfBeds { get; set; }
 
         [Required]

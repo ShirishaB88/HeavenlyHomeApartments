@@ -54,6 +54,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddressModels\AddressCreate.cs" />
+    <Compile Include="AddressModels\AddressDetail.cs" />
+    <Compile Include="AddressModels\AddressEdit.cs" />
+    <Compile Include="AddressModels\AddressListItems.cs" />
     <Compile Include="FloorPlanModels\FloorPlanCreate.cs" />
     <Compile Include="FloorPlanModels\FloorPlanDetail.cs" />
     <Compile Include="FloorPlanModels\FloorPlanEdit.cs" />

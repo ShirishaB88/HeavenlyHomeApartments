@@ -9,6 +9,7 @@ namespace HeavenlyHome_Models.FloorPlanModels
     public class FloorPlanEdit
     {
         public int FloorPlanID { get; set; }
+        public string FloorPlanName { get; set; }
         public int NoOfBeds { get; set; }
         public int NoOfBaths { get; set; }
         public int AreaInSqFt { get; set; }
