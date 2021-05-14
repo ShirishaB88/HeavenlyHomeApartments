@@ -93,7 +93,7 @@ namespace HeavenlyHomeApartments_WebMVC.Controllers
                 return RedirectToAction("Index");
             }
             ModelState.AddModelError("", "Resident could not be updated");
-            return View();
+            return View(model);
         }
 
         //GET: Resident/Delete/{id}

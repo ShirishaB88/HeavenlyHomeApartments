@@ -23,6 +23,7 @@ namespace HeavenlyHome_Service
                 new FloorPlan()
                 {
                     UserID = _userID,
+                    FloorPlanName = model.FloorPlanName,
                     NoOfBaths = model.NoOfBaths,
                     NoOfBeds = model.NoOfBeds,
                     AreaInSqFt = model.AreaInSqFt,
@@ -52,6 +53,7 @@ namespace HeavenlyHome_Service
                     .Select(e => new FloorPlanListItem
                     {
                         FloorPlanID = e.FloorPlanID,
+                        FloorPlanName = e.FloorPlanName,
                         NoOfBaths = e.NoOfBaths,
                         NoOfBeds = e.NoOfBeds,
                         AreaInSqFt = e.AreaInSqFt,
@@ -78,6 +80,7 @@ namespace HeavenlyHome_Service
                     new FloorPlanDetail
                     {
                         FloorPlanID = entity.FloorPlanID,
+                        FloorPlanName = entity.FloorPlanName,
                         NoOfBeds = entity.NoOfBeds,
                         NoOfBaths = entity.NoOfBaths,
                         AreaInSqFt = entity.AreaInSqFt,
@@ -105,6 +108,7 @@ namespace HeavenlyHome_Service
                     .Select(e => new FloorPlanListItem
                     {
                         FloorPlanID = e.FloorPlanID,
+                        FloorPlanName = e.FloorPlanName,
                         NoOfBaths = e.NoOfBaths,
                         NoOfBeds = e.NoOfBeds,
                         AreaInSqFt = e.AreaInSqFt,
@@ -133,6 +137,7 @@ namespace HeavenlyHome_Service
                     .Select(e => new FloorPlanListItem
                     {
                         FloorPlanID = e.FloorPlanID,
+                        FloorPlanName = e.FloorPlanName,
                         NoOfBaths = e.NoOfBaths,
                         NoOfBeds = e.NoOfBeds,
                         AreaInSqFt = e.AreaInSqFt,
@@ -160,6 +165,7 @@ namespace HeavenlyHome_Service
                     .Select(e => new FloorPlanListItem
                     {
                         FloorPlanID = e.FloorPlanID,
+                        FloorPlanName = e.FloorPlanName,
                         NoOfBaths = e.NoOfBaths,
                         NoOfBeds = e.NoOfBeds,
                         AreaInSqFt = e.AreaInSqFt,
@@ -187,6 +193,7 @@ namespace HeavenlyHome_Service
                     .Select(e => new FloorPlanListItem
                     {
                         FloorPlanID = e.FloorPlanID,
+                        FloorPlanName = e.FloorPlanName,
                         NoOfBaths = e.NoOfBaths,
                         NoOfBeds = e.NoOfBeds,
                         AreaInSqFt = e.AreaInSqFt,
@@ -215,6 +222,7 @@ namespace HeavenlyHome_Service
                     .Select(e => new FloorPlanListItem
                     {
                         FloorPlanID = e.FloorPlanID,
+                        FloorPlanName = e.FloorPlanName,
                         NoOfBaths = e.NoOfBaths,
                         NoOfBeds = e.NoOfBeds,
                         AreaInSqFt = e.AreaInSqFt,
@@ -243,6 +251,7 @@ namespace HeavenlyHome_Service
                     .Select(e => new FloorPlanListItem
                     {
                         FloorPlanID = e.FloorPlanID,
+                        FloorPlanName = e.FloorPlanName,
                         NoOfBaths = e.NoOfBaths,
                         NoOfBeds = e.NoOfBeds,
                         AreaInSqFt = e.AreaInSqFt,
@@ -268,6 +277,7 @@ namespace HeavenlyHome_Service
                     .FloorPlans
                     .Single(e => e.FloorPlanID == model.FloorPlanID && e.UserID == _userID);
 
+                entity.FloorPlanName = model.FloorPlanName;
                 entity.NoOfBaths = model.NoOfBaths;
                 entity.NoOfBeds = model.NoOfBeds;
                 entity.AreaInSqFt = model.AreaInSqFt;

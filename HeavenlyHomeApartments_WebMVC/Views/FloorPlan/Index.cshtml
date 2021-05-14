@@ -25,6 +25,9 @@
             @Html.DisplayNameFor(model => model.FloorPlanID)
         </th>
         <th>
+            @Html.DisplayNameFor(model => model.FloorPlanName)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.NoOfBeds)
         </th>
         <th>
@@ -56,6 +59,9 @@
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.FloorPlanID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FloorPlanName)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.NoOfBeds)
