@@ -1,4 +1,5 @@
-﻿using HeavenlyHome_Models.ResidentModels;
+﻿using HeavenlyHome_Data;
+using HeavenlyHome_Models.ResidentModels;
 using HeavenlyHome_Service;
 using Microsoft.AspNet.Identity;
 using System;
@@ -9,20 +10,24 @@ using System.Web.Mvc;
 
 namespace HeavenlyHomeApartments_WebMVC.Controllers
 {
-    [Authorize]
+   [Authorize]
     public class ResidentController : Controller
     {
+        private ApplicationDbContext _db = new ApplicationDbContext();
+
         // GET: Resident
         public ActionResult Index()
         {
             var userID = Guid.Parse(User.Identity.GetUserId());
-            var service = new ResidentService(userID);       
-            return View();
+            var service = new ResidentService(userID);
+            var model = service.GetAllResidents();
+            return View(model);
         }
 
         //GET: ResidentCreate
         public ActionResult Create()
         {
+            ViewBag.AddressID = new SelectList(_db.Addresses, "AddressID", "FullAddress");
             return View();
         }
 
@@ -40,7 +45,7 @@ namespace HeavenlyHomeApartments_WebMVC.Controllers
                 return RedirectToAction("Index");
             }
 
-            ModelState.AddModelError("", "FloorPlan can not be Added");
+            ModelState.AddModelError("", "Resident can not be Added");
             return View(model);
 
         }

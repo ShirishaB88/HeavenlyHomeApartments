@@ -12,6 +12,7 @@ namespace HeavenlyHome_Data
     {
         [Key]
         public int AddressID { get; set; }
+        public Guid UserID { get; set; }
 
         [ForeignKey(nameof(FloorPlan))]
         public int FloorPlanID { get; set; }

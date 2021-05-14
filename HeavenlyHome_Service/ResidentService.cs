@@ -38,6 +38,7 @@ namespace HeavenlyHome_Service
             }
 
         }
+
         //Get all Redidents
         public IEnumerable<ResidentListItems> GetAllResidents()
         {

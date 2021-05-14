@@ -13,6 +13,8 @@ namespace HeavenlyHome_Data
         [Key]
         public int PaymentID { get; set; }
 
+        public Guid UserID { get; set; }
+
         [ForeignKey(nameof(Resident))]
         public int ResidentID { get; set; }
 
