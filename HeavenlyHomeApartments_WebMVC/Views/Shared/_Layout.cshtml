@@ -25,12 +25,11 @@
                     <li>@Html.ActionLink("Features", "Features", "Home")</li>
 
                     @if (User.Identity.IsAuthenticated)
-                    {
+                     {
                         <li>@Html.ActionLink("FloorPlans", "Index", "FloorPlan")</li>
-
                         <li>@Html.ActionLink("Residents", "Index", "Resident")</li>
                         <li>@Html.ActionLink("Address", "Index", "Address")</li>
-                    }
+                     }
 
                     <li>@Html.ActionLink("Photos", "Photos", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
