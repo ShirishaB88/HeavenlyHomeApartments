@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace HeavenlyHome_Models.MaintenanceRequestModels
 {
-    public class MaintenanceRequestListItems
+    public class MaintenanceRequestListItem
     {
         public int RequestID { get; set; }
 

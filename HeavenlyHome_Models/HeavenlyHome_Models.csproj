@@ -65,7 +65,7 @@
     <Compile Include="MaintenanceRequestModels\MaintenanceRequestCreate.cs" />
     <Compile Include="MaintenanceRequestModels\MaintenanceRequestDetails.cs" />
     <Compile Include="MaintenanceRequestModels\MaintenanceRequestEdit.cs" />
-    <Compile Include="MaintenanceRequestModels\MaintenanceRequestListItems.cs" />
+    <Compile Include="MaintenanceRequestModels\MaintenanceRequestListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ResidentModels\ResidentCreate.cs" />
     <Compile Include="ResidentModels\ResidentDetail.cs" />

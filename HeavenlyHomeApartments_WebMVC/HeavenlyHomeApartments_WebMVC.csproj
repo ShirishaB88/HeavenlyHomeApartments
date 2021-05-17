@@ -171,6 +171,7 @@
     <Compile Include="Controllers\AddressController.cs" />
     <Compile Include="Controllers\FloorPlanController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MaintenanceRequestController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\ResidentController.cs" />
     <Compile Include="Global.asax.cs">
@@ -256,6 +257,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\MaintenanceRequest\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
