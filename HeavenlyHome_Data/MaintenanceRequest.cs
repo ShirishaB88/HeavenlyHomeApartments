@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace HeavenlyHome_Data
 {
-    public class MaintenanceListItems
+    public class MaintenanceRequest
     {
         [Key]
         public int RequestID { get; set; }

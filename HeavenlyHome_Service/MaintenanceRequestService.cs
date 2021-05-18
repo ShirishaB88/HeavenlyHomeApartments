@@ -23,7 +23,7 @@ namespace HeavenlyHome_Service
         {
             using (var ctx = new ApplicationDbContext())
             {
-                var entity = new MaintenanceListItems
+                var entity = new MaintenanceRequest
                 {
                     UserID = _userID,
                     ResidentID = model.ResidentID,

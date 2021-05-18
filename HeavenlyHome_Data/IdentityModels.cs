@@ -39,8 +39,9 @@ namespace HeavenlyHome_Data
         public DbSet<Resident> Residents { get; set; }
         public DbSet<Payment> Payments { get; set; }
         public DbSet<PaymentType> PaymentTypes { get; set; }
-        public DbSet<MaintenanceListItems> MaintenanceRequests { get; set; }
+        public DbSet<MaintenanceRequest> MaintenanceRequests { get; set; }
         public DbSet<Applicant> Applicants { get; set; }
+        public DbSet<UserRole> UserRoles { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

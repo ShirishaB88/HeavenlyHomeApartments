@@ -18,7 +18,7 @@ namespace HeavenlyHomeApartments_WebMVC.Controllers
     {
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
-
+        private ApplicationDbContext ctx = new ApplicationDbContext();
         public AccountController()
         {
         }
@@ -140,6 +140,8 @@ namespace HeavenlyHomeApartments_WebMVC.Controllers
         [AllowAnonymous]
         public ActionResult Register()
         {
+            ViewBag.Name = new SelectList(ctx.Roles.Where(u => !u.Name.Contains("Admin"))
+                                    .ToList(), "Name", "Name");
             return View();
         }
 
@@ -166,6 +168,8 @@ namespace HeavenlyHomeApartments_WebMVC.Controllers
 
                     return RedirectToAction("Index", "Home");
                 }
+                ViewBag.Name = new SelectList(ctx.Roles.Where(u => !u.Name.Contains("Admin"))
+                                  .ToList(), "Name", "Name");
                 AddErrors(result);
             }
 
