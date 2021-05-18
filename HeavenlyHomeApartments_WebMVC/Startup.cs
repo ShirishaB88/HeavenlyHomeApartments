@@ -24,7 +24,7 @@ namespace HeavenlyHomeApartments_WebMVC
 
             var userManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(ctx));
 
-            // In Startup I am creating first Admin Role and creating a default Admin User
+            // creating first Admin Role and creating a default Admin User
 
             if (!roleManager.RoleExists("Admin"))
             {
