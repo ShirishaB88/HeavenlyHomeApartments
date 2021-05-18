@@ -60,17 +60,13 @@
     <Compile Include="IdentityModels.cs" />
     <Compile Include="LeasingInfo.cs" />
     <Compile Include="MaintenanceRequest.cs" />
-    <Compile Include="Migrations\202105141458373_InitialMigration.cs" />
-    <Compile Include="Migrations\202105141458373_InitialMigration.Designer.cs">
-      <DependentUpon>202105141458373_InitialMigration.cs</DependentUpon>
+    <Compile Include="Migrations\202105181353426_InitialCreate.cs" />
+    <Compile Include="Migrations\202105181353426_InitialCreate.Designer.cs">
+      <DependentUpon>202105181353426_InitialCreate.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202105141932212_InitialMigration1.cs" />
-    <Compile Include="Migrations\202105141932212_InitialMigration1.Designer.cs">
-      <DependentUpon>202105141932212_InitialMigration1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202105171447041_InitialMigration2.cs" />
-    <Compile Include="Migrations\202105171447041_InitialMigration2.Designer.cs">
-      <DependentUpon>202105171447041_InitialMigration2.cs</DependentUpon>
+    <Compile Include="Migrations\202105181449355_InitialMigration.cs" />
+    <Compile Include="Migrations\202105181449355_InitialMigration.Designer.cs">
+      <DependentUpon>202105181449355_InitialMigration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Payment.cs" />
@@ -99,17 +95,6 @@
     <None Include="Scripts\umd\popper.js.flow" />
     <None Include="Scripts\umd\popper.js.map" />
     <None Include="Scripts\umd\popper.min.js.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\202105141458373_InitialMigration.resx">
-      <DependentUpon>202105141458373_InitialMigration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105141932212_InitialMigration1.resx">
-      <DependentUpon>202105141932212_InitialMigration1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105171447041_InitialMigration2.resx">
-      <DependentUpon>202105171447041_InitialMigration2.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Scripts\esm\popper-utils.js" />
@@ -195,6 +180,14 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\index.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202105181353426_InitialCreate.resx">
+      <DependentUpon>202105181353426_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105181449355_InitialMigration.resx">
+      <DependentUpon>202105181449355_InitialMigration.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

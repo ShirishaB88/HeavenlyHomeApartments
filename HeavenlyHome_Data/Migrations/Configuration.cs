@@ -10,6 +10,7 @@ namespace HeavenlyHome_Data.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
+            ContextKey = "HeavenlyHome_Data.ApplicationDbContext";
         }
 
         protected override void Seed(HeavenlyHome_Data.ApplicationDbContext context)

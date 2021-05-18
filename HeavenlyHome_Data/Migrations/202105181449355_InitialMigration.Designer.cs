@@ -7,13 +7,13 @@ namespace HeavenlyHome_Data.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.0-30225")]
-    public sealed partial class InitialMigration2 : IMigrationMetadata
+    public sealed partial class InitialMigration : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(InitialMigration2));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(InitialMigration));
         
         string IMigrationMetadata.Id
         {
-            get { return "202105171447041_InitialMigration2"; }
+            get { return "202105181449355_InitialMigration"; }
         }
         
         string IMigrationMetadata.Source

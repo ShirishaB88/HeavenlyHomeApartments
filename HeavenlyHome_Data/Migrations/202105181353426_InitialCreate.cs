@@ -3,7 +3,7 @@ namespace HeavenlyHome_Data.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class InitialMigration : DbMigration
+    public partial class InitialCreate : DbMigration
     {
         public override void Up()
         {
@@ -27,6 +27,7 @@ namespace HeavenlyHome_Data.Migrations
                     {
                         FloorPlanID = c.Int(nullable: false, identity: true),
                         UserID = c.Guid(nullable: false),
+                        FloorPlanName = c.String(nullable: false),
                         NoOfBeds = c.Int(nullable: false),
                         NoOfBaths = c.Int(nullable: false),
                         AreaInSqFt = c.Int(nullable: false),
@@ -47,8 +48,9 @@ namespace HeavenlyHome_Data.Migrations
                         FirstName = c.String(nullable: false),
                         LastName = c.String(nullable: false),
                         Email = c.String(),
-                        Password = c.String(),
                         PhoneNumber = c.Int(nullable: false),
+                        MoveInDate = c.DateTime(nullable: false),
+                        Requirements = c.String(),
                     })
                 .PrimaryKey(t => t.AplicantID);
             
@@ -157,6 +159,15 @@ namespace HeavenlyHome_Data.Migrations
                 .Index(t => t.ApplicationUser_Id);
             
             CreateTable(
+                "dbo.UserRole",
+                c => new
+                    {
+                        RoleID = c.Int(nullable: false, identity: true),
+                        RoleName = c.String(),
+                    })
+                .PrimaryKey(t => t.RoleID);
+            
+            CreateTable(
                 "dbo.ApplicationUser",
                 c => new
                     {
@@ -229,6 +240,7 @@ namespace HeavenlyHome_Data.Migrations
             DropTable("dbo.IdentityUserLogin");
             DropTable("dbo.IdentityUserClaim");
             DropTable("dbo.ApplicationUser");
+            DropTable("dbo.UserRole");
             DropTable("dbo.IdentityUserRole");
             DropTable("dbo.IdentityRole");
             DropTable("dbo.PaymentType");
