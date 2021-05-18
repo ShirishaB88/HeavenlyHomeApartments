@@ -16,12 +16,25 @@ namespace HeavenlyHomeApartments_WebMVC.Controllers
         private ApplicationDbContext _db = new ApplicationDbContext();
 
         // GET: Resident
-        public ActionResult Index()
+        public ActionResult Index(string searchBy, string search)
         {
             var userID = Guid.Parse(User.Identity.GetUserId());
             var service = new ResidentService(userID);
             var model = service.GetAllResidents();
+
+            //return View(model);
+
+            if (searchBy == "ID")
+            {
+                return View(model.Where(e => e.ResidentID == int.Parse(search)).ToList());
+            }
+            else if(search == "Name")
+            {
+                return View(model.Where(e => e.FullName.StartsWith(search)).ToList());
+            }
+
             return View(model);
+
         }
 
         //GET: ResidentCreate
