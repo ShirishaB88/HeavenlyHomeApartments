@@ -13,12 +13,28 @@ namespace HeavenlyHomeApartments_WebMVC.Controllers
     {
         [Authorize]
         // GET: FloorPlan
-        public ActionResult Index()
+        public ActionResult Index(string searchBy, string search)
         {
             var userID = Guid.Parse(User.Identity.GetUserId());
             var service = new FloorPlanService(userID);
             var model = service.GetFloorPlans();
-            return View(model);
+
+            if (searchBy == "Baths")
+            {
+                return View(model.Where(e => e.NoOfBaths == int.Parse(search) && e.IsAvailable == true));
+            }
+            else if (searchBy == "Beds")
+            {
+                return View(model.Where(e => e.NoOfBeds == int.Parse(search) && e.IsAvailable == true));
+            }
+            else if(searchBy == "Garage")
+            {
+                return View(model.Where(e => e.NoOfGarageSpaces == int.Parse(search) && e.IsAvailable == true));
+            }
+            else
+            {
+                return View(model);
+            }
         }
 
         //GET: FloorPlan/Create
