@@ -30,16 +30,17 @@
                         <li>@Html.ActionLink("Residents", "Index", "Resident")</li>
                         <li>@Html.ActionLink("Address", "Index", "Address")</li>
                     }
+
                     @if (User.IsInRole("Resident"))
                     {
-                        <li>@Html.ActionLink("MaintenanceRequests", "Index", "MaintenanceReuest")</li>
+                        <li>@Html.ActionLink("MaintenanceRequests", "Index", "MaintenanceRequest")</li>
                         <li>@Html.ActionLink("Payments", "Index", "Payment")</li>
 
                     }
 
                     <li>@Html.ActionLink("Photos", "Photos", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                    <li>@Html.ActionLink("ApplyNow", "ApplyNow", "Home")</li>
+                    <li>@Html.ActionLink("ApplyNow", "Index", "Applicant")</li>
 
                 </ul>
                 @Html.Partial("_LoginPartial")
