@@ -24,16 +24,18 @@ namespace HeavenlyHomeApartments_WebMVC.Controllers
 
             //return View(model);
 
-            if (searchBy == "ID")
+            if(searchBy == "Name")
             {
-                return View(model.Where(e => e.ResidentID == int.Parse(search)).ToList());
+                return View(model.Where(e => e.FullName.StartsWith(search)));
             }
-            else if(search == "Name")
+            else if (searchBy == "ID")
             {
-                return View(model.Where(e => e.FullName.StartsWith(search)).ToList());
+                return View(model.Where(e => e.ResidentID == int.Parse(search)));
             }
-
-            return View(model);
+            else
+            {
+                return View(model);
+            }
 
         }
 
