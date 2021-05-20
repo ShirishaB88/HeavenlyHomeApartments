@@ -21,26 +21,32 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
+                    
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("Features", "Features", "Home")</li>
-
-                    @if (User.IsInRole("Manager"))
-                    {
-                        <li>@Html.ActionLink("FloorPlans", "Index", "FloorPlan")</li>
-                        <li>@Html.ActionLink("Residents", "Index", "Resident")</li>
-                        <li>@Html.ActionLink("Address", "Index", "Address")</li>
-                    }
-
-                    @if (User.IsInRole("Resident"))
-                    {
-                        <li>@Html.ActionLink("MaintenanceRequests", "Index", "MaintenanceRequest")</li>
-                        <li>@Html.ActionLink("Payments", "Index", "Payment")</li>
-
-                    }
-
                     <li>@Html.ActionLink("Photos", "Photos", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                     <li>@Html.ActionLink("ApplyNow", "Index", "Applicant")</li>
+
+                    @if (User.IsInRole("Applicant"))
+                     {
+                      <li>@Html.ActionLink("ApplyNow", "Index", "Applicant")</li>
+
+                     }
+
+                    @if (User.IsInRole("Manager"))
+                     {
+                        <li>@Html.ActionLink("FloorPlans", "Index", "FloorPlan")</li>
+                        <li>@Html.ActionLink("Residents", "Index", "Resident")</li>
+                        <li>@Html.ActionLink("Address", "Index", "Address")</li>
+                     }
+
+                    @if (User.IsInRole("Resident"))
+                     {
+                        <li>@Html.ActionLink("ResidentPortal", "Index", "ResidentPortal")</li>
+                     }
+
+
 
                 </ul>
                 @Html.Partial("_LoginPartial")

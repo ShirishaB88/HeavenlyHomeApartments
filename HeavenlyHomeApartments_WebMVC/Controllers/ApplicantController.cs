@@ -35,7 +35,7 @@ namespace HeavenlyHomeApartments_WebMVC.Controllers
             var service = new ApplicantService();
             if (service.CreateApplicant(model))
             {
-                TempData["SaveResult"] = "Hello! " +  model.FirstName + " Your Application has been posted! We will get back to you As Soon As Possible, Thank you!";
+                TempData["SaveResult"] = "Hello! " + model.FirstName + " Your Application has been posted! We will get back to you As Soon As Possible, Thank you!\n" + "Please send below mentioned documents to Admin@heavenlyhome.com\n" + "Driver's License\n" + "Proof of income" + "Current adress prrof";
 
                 return RedirectToAction("Index");
             }
