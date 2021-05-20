@@ -177,6 +177,7 @@
     <Compile Include="Controllers\MaintenanceRequestController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\ResidentController.cs" />
+    <Compile Include="Controllers\ResidentPortalController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -405,6 +406,7 @@
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Views\Applicant\Create.cshtml" />
     <Content Include="Views\Applicant\Index.cshtml" />
+    <Content Include="Views\ResidentPortal\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
