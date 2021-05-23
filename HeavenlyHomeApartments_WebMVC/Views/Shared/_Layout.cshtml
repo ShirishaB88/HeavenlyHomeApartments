@@ -3,13 +3,13 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title -Heavenly Home Apartments</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar navbar-inverse navbar-fixed-top">           
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -21,7 +21,7 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    
+
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("Features", "Features", "Home")</li>
                     <li>@Html.ActionLink("Photos", "Photos", "Home")</li>
@@ -29,22 +29,22 @@
                     <li>@Html.ActionLink("ApplyNow", "Index", "Applicant")</li>
 
                     @if (User.IsInRole("Applicant"))
-                     {
-                      <li>@Html.ActionLink("ApplyNow", "Index", "Applicant")</li>
+                    {
+                        <li>@Html.ActionLink("ApplyNow", "Index", "Applicant")</li>
 
-                     }
+                    }
 
                     @if (User.IsInRole("Manager"))
-                     {
+                    {
                         <li>@Html.ActionLink("FloorPlans", "Index", "FloorPlan")</li>
                         <li>@Html.ActionLink("Residents", "Index", "Resident")</li>
                         <li>@Html.ActionLink("Address", "Index", "Address")</li>
-                     }
+                    }
 
                     @if (User.IsInRole("Resident"))
-                     {
+                    {
                         <li>@Html.ActionLink("ResidentPortal", "Index", "ResidentPortal")</li>
-                     }
+                    }
 
 
 

@@ -26,6 +26,13 @@ namespace HeavenlyHomeApartments_WebMVC.Controllers
         //GET: MaintenanceRequestCreate
         public ActionResult Create()
         {
+            ViewBag.Category = Enum.GetValues(typeof(Category))
+                .Cast<Category>()
+                .Select(e => new SelectListItem
+                {
+                    Value = e.ToString(),
+                    Text = e.ToString()
+                });
             return View();
         }
         //CREATE: MaintenanceRequestCreate
