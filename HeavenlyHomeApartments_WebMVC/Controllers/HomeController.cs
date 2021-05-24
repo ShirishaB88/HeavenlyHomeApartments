@@ -38,5 +38,10 @@ namespace HeavenlyHomeApartments_WebMVC.Controllers
 
             return View();
         }
+
+        public ActionResult FloorPlans()
+        {
+            return View();
+        }
     }
 }
