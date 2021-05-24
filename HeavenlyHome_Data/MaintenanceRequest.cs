@@ -30,7 +30,7 @@ namespace HeavenlyHome_Data
         [EnumDataType(typeof(Category))]
         public Category Category { get; set; }
 
-        List<string> _subCategories;
+        List<string> _subCategory;
         public List<string> SubCategory 
         { 
             
@@ -40,38 +40,50 @@ namespace HeavenlyHome_Data
                 {
                     case Category.Appliance:
 
-                        return Enum.GetNames(typeof(Appliances)).ToList();
-                        
+                         _subCategory = Enum.GetNames(typeof(Appliances)).ToList();
+                        return this._subCategory;
+
                     case Category.Electrical:
 
-                        return Enum.GetNames(typeof(Electrical)).ToList();
+                        _subCategory = Enum.GetNames(typeof(Electrical)).ToList();
+                        return this._subCategory;
 
                     case Category.BuildingRepairs:
 
-                        return Enum.GetNames(typeof(Exterior)).ToList();
+                        _subCategory = Enum.GetNames(typeof(Exterior)).ToList();
+                        return this._subCategory;
 
                     case Category.Plumbing:
 
-                        return Enum.GetNames(typeof(Plumbing)).ToList();
+                        _subCategory =  Enum.GetNames(typeof(Plumbing)).ToList();
+                        return this._subCategory;
 
                     case Category.Garage:
 
-                        return Enum.GetNames(typeof(Garage)).ToList();
+                        _subCategory =  Enum.GetNames(typeof(Garage)).ToList();
+                        return this._subCategory;
 
                     case Category.Locksandkeys:
-                        return null;
+                        _subCategory = null;
+                        return _subCategory;
+
                     case Category.Blinds:
-                        return null;
+                        _subCategory = null;
+                        return _subCategory;
                     case Category.Other:
-                        return null;
+
+                        _subCategory = null;
+                        return _subCategory;
+
                     default:
-                        break;
+                        _subCategory = null;
+                        return _subCategory;
                 }
-                return null;
+                
             }
             set
             {
-              
+                this._subCategory = value;
             }
         }
 
