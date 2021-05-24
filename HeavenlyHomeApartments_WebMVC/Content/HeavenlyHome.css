@@ -1,0 +1,19 @@
+﻿body {
+    padding-top: 0;
+    font-family: "Roboto",sans-serif;
+}
+
+.media ol li {
+    list-style: none;
+    display: inline-block;
+    padding:inherit;
+}
+.media ol {
+    float: left;
+}
+
+
+.nav-link{
+    color:black;
+}
+

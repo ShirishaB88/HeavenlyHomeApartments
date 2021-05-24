@@ -13,9 +13,7 @@ namespace HeavenlyHome_Models.ApplicantModels
         public string LastName { get; set; }
 
         [DataType(DataType.EmailAddress)]
-        public string Email { get; set; }
-
-        [DataType(DataType.PhoneNumber)]
+        public string Email { get; set; }     
         public int PhoneNumber { get; set; }
 
         [Required]

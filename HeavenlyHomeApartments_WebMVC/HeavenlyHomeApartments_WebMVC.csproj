@@ -187,10 +187,13 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\bootstrap-theme.css" />
-    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap-grid.css" />
+    <Content Include="Content\bootstrap-grid.min.css" />
+    <Content Include="Content\bootstrap-reboot.css" />
+    <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\HeavenlyHome.css" />
     <Content Include="Content\themes\base\accordion.css" />
     <Content Include="Content\themes\base\all.css" />
     <Content Include="Content\themes\base\autocomplete.css" />
@@ -215,12 +218,26 @@
     <Content Include="Content\themes\base\images\Amenities3.png" />
     <Content Include="Content\themes\base\images\Apartment entrence.png" />
     <Content Include="Content\themes\base\images\Apartment side view.jpg" />
+    <Content Include="Content\themes\base\images\Apartments lounge.jpg" />
+    <Content Include="Content\themes\base\images\Bath1.jpg" />
+    <Content Include="Content\themes\base\images\Bed1.jpg" />
+    <Content Include="Content\themes\base\images\Bed2.jpg" />
     <Content Include="Content\themes\base\images\Contactbackground.jpg" />
+    <Content Include="Content\themes\base\images\facebook.png" />
+    <Content Include="Content\themes\base\images\Fitness center.jpg" />
+    <Content Include="Content\themes\base\images\icon-amenity-community.png" />
+    <Content Include="Content\themes\base\images\icon-amenity.png" />
     <Content Include="Content\themes\base\images\Index1.jpg" />
     <Content Include="Content\themes\base\images\Index2.jpg" />
     <Content Include="Content\themes\base\images\Index3.jpg" />
+    <Content Include="Content\themes\base\images\Instagramlogo - Copy.png" />
+    <Content Include="Content\themes\base\images\Jumborton.png" />
+    <Content Include="Content\themes\base\images\Laundry.jpg" />
+    <Content Include="Content\themes\base\images\LivingRoom.jpg" />
     <Content Include="Content\themes\base\images\Logo.png" />
+    <Content Include="Content\themes\base\images\Logo2.png" />
     <Content Include="Content\themes\base\images\Pool.jpg" />
+    <Content Include="Content\themes\base\images\Twitter - Copy.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -240,6 +257,7 @@
     <Content Include="Content\themes\base\images\ui-icons_cc0000_256x240.png" />
     <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
     <Content Include="Content\themes\base\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Content\themes\base\images\Youtube - Copy.png" />
     <Content Include="Content\themes\base\jquery-ui.css" />
     <Content Include="Content\themes\base\jquery-ui.min.css" />
     <Content Include="Content\themes\base\menu.css" />
@@ -254,9 +272,10 @@
     <Content Include="Content\themes\base\theme.css" />
     <Content Include="Content\themes\base\tooltip.css" />
     <Content Include="favicon.ico" />
-    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Scripts\bootstrap.bundle.js" />
+    <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\esm\popper-utils.js" />
@@ -268,14 +287,16 @@
     <Content Include="Scripts\esm\popper.js.map" />
     <Content Include="Scripts\esm\popper-utils.min.js.map" />
     <Content Include="Scripts\esm\popper-utils.js.map" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Scripts\bootstrap.min.js.map" />
+    <Content Include="Scripts\bootstrap.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.min.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.js.map" />
     <Content Include="Content\bootstrap.min.css.map" />
     <Content Include="Content\bootstrap.css.map" />
-    <Content Include="Content\bootstrap-theme.min.css.map" />
-    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\bootstrap-reboot.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.css.map" />
+    <Content Include="Content\bootstrap-grid.min.css.map" />
+    <Content Include="Content\bootstrap-grid.css.map" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -428,8 +449,9 @@
     <Content Include="Views\Applicant\Create.cshtml" />
     <Content Include="Views\Applicant\Index.cshtml" />
     <Content Include="Views\ResidentPortal\Index.cshtml" />
-    <Content Include="Views\Home\Photos.cshtml" />
     <Content Include="Views\Home\Features.cshtml" />
+    <Content Include="Views\Home\Photos.cshtml" />
+    <Content Include="Views\Home\FloorPlans.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
