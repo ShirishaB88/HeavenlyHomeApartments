@@ -26,5 +26,17 @@ namespace HeavenlyHomeApartments_WebMVC.Controllers
 
             return View();
         }
+
+        public ActionResult Photos()
+        {
+           
+            return View();
+        }
+
+        public ActionResult Features()
+        {
+
+            return View();
+        }
     }
 }

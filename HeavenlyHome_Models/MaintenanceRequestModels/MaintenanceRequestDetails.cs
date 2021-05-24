@@ -14,10 +14,10 @@ namespace HeavenlyHome_Models.MaintenanceRequestModels
         public int ResidentID { get; set; }
         public Resident Resident { get; set; }
 
-        public string Category { get; set; }
+        public Category Category { get; set; }
 
-        public string SubCategory { get; set; }
-        public string Location { get; set; }
+        public List<string> SubCategory { get; set; }
+        public Location Location { get; set; }
 
         public string Description { get; set; }
 
