@@ -10,6 +10,15 @@
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
+    <div class="row">
+        <div class="col-md-4">
+            <img src="~/Content/themes/base/images/Logo.png" width="200" height="200" />
+
+        </div>
+        <div class="col-md-8">
+            <h2 class="text-black-50">At Last, This Is What You’ve Been Searching For.</h2>
+        </div>
+    </div>
 
     <div class="form-horizontal">
         @*<h4>New Applicantion</h4>*@
@@ -77,20 +86,20 @@
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
-<script src="~/Scripts/jquery-ui-1.12.1.js"></script>
-<script src="~/Scripts/jquery-ui-1.12.1.min.js"></script>
-<script>
+    <script src="~/Scripts/jquery-ui-1.12.1.js"></script>
+    <script src="~/Scripts/jquery-ui-1.12.1.min.js"></script>
+    <script>
 
-    $(function () {
-        $("#datepicker").datepicker({
-            changeMonth: true,
-            changeYear: true,
-            minDate: 0,
-            maxDate: 180,
-            showOn: "both",
-            buttonImage: "http://jqueryui.com/resources/demos/datepicker/images/calendar.gif"
+        $(function () {
+            $("#datepicker").datepicker({
+                changeMonth: true,
+                changeYear: true,
+                minDate: 0,
+                maxDate: 180,
+                showOn: "both",
+                buttonImage: "http://jqueryui.com/resources/demos/datepicker/images/calendar.gif"
+            });
         });
-    });
-</script>
+    </script>
 }
 

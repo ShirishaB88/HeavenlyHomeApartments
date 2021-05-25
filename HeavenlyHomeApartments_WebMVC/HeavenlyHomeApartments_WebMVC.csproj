@@ -237,6 +237,8 @@
     <Content Include="Content\themes\base\images\LivingRoom.jpg" />
     <Content Include="Content\themes\base\images\Logo.png" />
     <Content Include="Content\themes\base\images\Logo2.png" />
+    <Content Include="Content\themes\base\images\MaintenanceRequest.png" />
+    <Content Include="Content\themes\base\images\PaymentImage.png" />
     <Content Include="Content\themes\base\images\Pool.jpg" />
     <Content Include="Content\themes\base\images\Twitter - Copy.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
