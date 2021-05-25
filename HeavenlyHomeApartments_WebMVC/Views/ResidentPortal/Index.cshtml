@@ -3,16 +3,44 @@
     ViewBag.Title = "Index";
 }
 
-@*<h2>Welcome @Model.FullName</h2>*@
 
+<div class="row">
+    <div class="col-md-4">
+        <img src="~/Content/themes/base/images/Logo.png" width="200" height="200" />
 
-<p>
-    @Html.ActionLink("ResidentPortal", "Index")
-</p>
+    </div>
+    <div class="col-md-8">
+        <br />
+        <h2 class="text-danger">Hello!</h2>
+        <h2 class="text-black-50">Resident</h2>
+    </div>
+</div>
+<hr />
 
-<ul>
+<div class="row">
+    <div class="col-sm-6">
+        <div class="card" style="width: 18rem;">
+            <img src="~/Content/themes/base/images/MaintenanceRequest.png" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Maintenace Request</h5>
+                <p class="card-text">Submit online maintenace requests </p>
+                <br />
+                @Html.ActionLink("Maintenance Requests", "Index", "MaintenanceRequest", null, new { @class = "btn btn-primary" })
 
-    @Html.ActionLink("MaintenanceRequests", "Index", "MaintenanceRequest")
-    @Html.ActionLink("Payments", "Index", "Payment")
+            </div>
+        </div>
+    </div>
 
-</ul>
+    <div class="col-sm-6">
+        <div class="card" style="width: 18rem;">
+            <img src="~/Content/themes/base/images/PaymentImage.png" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Make Payments</h5>
+                <p class="card-text">Pay online, check the status of your payments and review your payment history.</p>
+                @Html.ActionLink("Payments", "Index", "Payment", null, new { @class = "btn btn-primary" })
+
+            </div>
+        </div>
+
+    </div>
+</div>

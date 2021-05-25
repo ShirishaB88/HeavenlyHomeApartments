@@ -10,55 +10,53 @@
 
 </head>
 <body>
-
-
     <nav class="navbar navbar-expand-lg navbar-light navbar-fixed-top bg-dark">
         <div class="container-fluid">
             <div class="navbar-header">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                @Html.ActionLink("HeavenlyHomeApartments", "Index", "Home")
-            </div>
+              @Html.ActionLink("HeavenlyHomeApartments", "Index", "Home", null, new { @class = "btn btn-light" }))
+    </div>
             <div class="navbar-collapse collapse" id="navbarSupportedContent">
                 <ul class="nav navbar-nav mr-auto">
 
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("FloorPlans", "FloorPlans", "Home")</li>
-                    <li>@Html.ActionLink("Features", "Features", "Home")</li>
-                    <li>@Html.ActionLink("Photos", "Photos", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                    <li>@Html.ActionLink("ApplyNow", "Index", "Applicant")</li>
+                    <li>@Html.ActionLink("Home", "Index", "Home", null, new {@class = "btn btn-light mr-1" })</li>
+                    <li>@Html.ActionLink("Floorplans", "FloorPlans", "Home", null, new { @class= "btn btn-light  mr-1" })</li>
+                    <li>@Html.ActionLink("Features", "Features", "Home", null, new {@class = "btn btn-light" }))</li>
+                    <li>@Html.ActionLink("Photos", "Photos", "Home", null, new {@class = "btn btn-light" }))</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home", null, new { @class = "btn btn-light" }))</li>
+                    <li>@Html.ActionLink("ApplyNow", "Index", "Applicant", null, new { @class = "btn btn-light" }))</li>
 
                     @if (User.IsInRole("Applicant"))
                     {
-                        <li>@Html.ActionLink("ApplyNow", "Index", "Applicant")</li>
+                        <li>@Html.ActionLink("ApplyNow", "Index", "Applicant", null, new { @class = "btn btn-light" }))</li>
 
                     }
 
                     @if (User.IsInRole("Manager"))
                     {
-                        <li>@Html.ActionLink("FloorPlans", "Index", "FloorPlan")</li>
-                        <li>@Html.ActionLink("Residents", "Index", "Resident")</li>
-                        <li>@Html.ActionLink("Address", "Index", "Address")</li>
+                        <li>@Html.ActionLink("FloorPlans", "Index", "FloorPlan", null, new { @class = "btn btn-light" }))</li>
+                        <li>@Html.ActionLink("Residents", "Index", "Resident", null, new { @class = "btn btn-light" }))</li>
+                        <li>@Html.ActionLink("Address", "Index", "Address", null, new { @class = "btn btn-light" }))</li>
                     }
 
                     @if (User.IsInRole("Resident"))
                     {
-                        <li>@Html.ActionLink("ResidentPortal", "Index", "ResidentPortal")</li>
+                        <li>@Html.ActionLink("ResidentPortal", "Index", "ResidentPortal", null, new { @class = "btn btn-light" }))</li>
                     }
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
         </div>
     </nav>
- 
+
     <div class="container body-content">
         @RenderBody()
         <hr />
         <footer>
-            
-        <p>&copy; @DateTime.Now.Year - HeavenlyHomeApratments</p>
+
+            <p>&copy; @DateTime.Now.Year - HeavenlyHomeApratments</p>
 
         </footer>
     </div>
