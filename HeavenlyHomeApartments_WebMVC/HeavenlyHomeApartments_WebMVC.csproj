@@ -176,6 +176,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MaintenanceRequestController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ManagementPortalController.cs" />
     <Compile Include="Controllers\ResidentController.cs" />
     <Compile Include="Controllers\ResidentPortalController.cs" />
     <Compile Include="Global.asax.cs">
@@ -214,6 +215,7 @@
     <Content Include="Content\themes\base\images\7.Maple FloorPlan.jpg" />
     <Content Include="Content\themes\base\images\8.Pine FloorPlan.jpg" />
     <Content Include="Content\themes\base\images\9.Gardenview FloorPlan.jpg" />
+    <Content Include="Content\themes\base\images\address.png" />
     <Content Include="Content\themes\base\images\Amenities1.png" />
     <Content Include="Content\themes\base\images\Amenities2.png" />
     <Content Include="Content\themes\base\images\Amenities3.png" />
@@ -223,9 +225,12 @@
     <Content Include="Content\themes\base\images\Bath1.jpg" />
     <Content Include="Content\themes\base\images\Bed1.jpg" />
     <Content Include="Content\themes\base\images\Bed2.jpg" />
+    <Content Include="Content\themes\base\images\cartoon-house.jpg" />
     <Content Include="Content\themes\base\images\Contactbackground.jpg" />
     <Content Include="Content\themes\base\images\facebook.png" />
     <Content Include="Content\themes\base\images\Fitness center.jpg" />
+    <Content Include="Content\themes\base\images\Group-of-People.jpg" />
+    <Content Include="Content\themes\base\images\house-in-cartoon.jpg" />
     <Content Include="Content\themes\base\images\icon-amenity-community.png" />
     <Content Include="Content\themes\base\images\icon-amenity.png" />
     <Content Include="Content\themes\base\images\Index1.jpg" />
@@ -455,6 +460,7 @@
     <Content Include="Views\Home\Features.cshtml" />
     <Content Include="Views\Home\Photos.cshtml" />
     <Content Include="Views\Home\FloorPlans.cshtml" />
+    <Content Include="Views\ManagementPortal\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

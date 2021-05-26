@@ -30,63 +30,6 @@ namespace HeavenlyHome_Data
         [EnumDataType(typeof(Category))]
         public Category Category { get; set; }
 
-        List<string> _subCategory;
-        public List<string> SubCategory 
-        { 
-            
-            get 
-            {
-                switch (Category)
-                {
-                    case Category.Appliance:
-
-                         _subCategory = Enum.GetNames(typeof(Appliances)).ToList();
-                        return this._subCategory;
-
-                    case Category.Electrical:
-
-                        _subCategory = Enum.GetNames(typeof(Electrical)).ToList();
-                        return this._subCategory;
-
-                    case Category.BuildingRepairs:
-
-                        _subCategory = Enum.GetNames(typeof(Exterior)).ToList();
-                        return this._subCategory;
-
-                    case Category.Plumbing:
-
-                        _subCategory =  Enum.GetNames(typeof(Plumbing)).ToList();
-                        return this._subCategory;
-
-                    case Category.Garage:
-
-                        _subCategory =  Enum.GetNames(typeof(Garage)).ToList();
-                        return this._subCategory;
-
-                    case Category.Locksandkeys:
-                        _subCategory = null;
-                        return _subCategory;
-
-                    case Category.Blinds:
-                        _subCategory = null;
-                        return _subCategory;
-                    case Category.Other:
-
-                        _subCategory = null;
-                        return _subCategory;
-
-                    default:
-                        _subCategory = null;
-                        return _subCategory;
-                }
-                
-            }
-            set
-            {
-                this._subCategory = value;
-            }
-        }
-
         [Required]
         [EnumDataType(typeof(Location))]
         public Location Location { get; set; }

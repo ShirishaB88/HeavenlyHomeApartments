@@ -53,7 +53,7 @@ namespace HeavenlyHome_Service
                 var query =
                     ctx
                     .MaintenanceRequests
-                    .Where(e => e.RequestID >= 1)
+                    .Where(e => e.RequestID >= 1 )
                     .Select(e => new MaintenanceRequestListItem
                     {
                         RequestID = e.RequestID,
@@ -69,7 +69,7 @@ namespace HeavenlyHome_Service
                         
                     });
 
-                return query.ToList();
+                return query.ToArray();
             }
 
         }
