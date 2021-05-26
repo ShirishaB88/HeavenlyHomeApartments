@@ -45,7 +45,7 @@ namespace HeavenlyHomeApartments_WebMVC.Controllers
             var service = CreateMaintenanceRequestService();
             if (service.CreateMaintenanceRequest(model))
             {
-                TempData["SaveResult"] = model.Resident.FullName + "Your new Maintenance Request been added we will get back to you soon!";
+                TempData["SaveResult"] =  "Your new Maintenance Request been added we will get back to you soon!";
                 return RedirectToAction("Index");
             }
 
@@ -69,10 +69,8 @@ namespace HeavenlyHomeApartments_WebMVC.Controllers
             MaintenanceRequestEdit model =
                 new MaintenanceRequestEdit
                 {
-                    RequestID = details.RequestID,
-                    ResidentID = details.ResidentID,
+                    RequestID = details.RequestID,                  
                     Category = details.Category,
-                    SubCategory = details.SubCategory,
                     Location = details.Location,
                     Description = details.Description,
                     Status = details.Status,

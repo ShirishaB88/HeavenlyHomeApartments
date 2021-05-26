@@ -1,0 +1,64 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<br />
+
+
+<div class="row">
+    <div class="col-md-4">
+        <img src="~/Content/themes/base/images/Logo.png" width="200" height="200" />
+
+    </div>
+    <div class="col-md-8">
+        <br />
+        <br />
+        <h4 class="text-danger">Heavenly Home Apartments</h4>
+        <h4 class="text-dark">Management Portal</h4>
+       
+    </div>
+</div>
+<hr />
+
+<div class="row">
+
+    <div class="col-sm-4">
+        <div class="card" style="width: 18rem;">
+            <img src="~/Content/themes/base/images/house-in-cartoon.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">FloorPlans</h5>
+                <p class="card-text">Access All Floor Plans</p>
+                @Html.ActionLink("FloorPlans", "Index", "FloorPlan", null, new { @class = "btn btn-danger" })
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="col-sm-4">
+        <div class="card" style="width: 18rem;">
+            <img src="~/Content/themes/base/images/address.png" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Address</h5>
+                <p class="card-text">Access All Addresses</p>
+                @Html.ActionLink("Address", "Index", "Address", null, new { @class = "btn btn-danger" })
+               
+            </div>
+        </div>
+
+    </div>
+
+    <div class="col-sm-4">
+        <div class="card" style="width: 18rem;">
+            <img src="~/Content/themes/base/images/Group-of-People.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Residents</h5>
+                <p class="card-text">Access All Residents</p>
+                @Html.ActionLink("Residents", "Index", "Resident", null, new { @class = "btn btn-danger" })
+           </div>
+        </div>
+
+    </div>
+</div>
+

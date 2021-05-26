@@ -21,7 +21,7 @@ namespace HeavenlyHome_Data
         public string Email { get; set; }
 
         [DataType(DataType.PhoneNumber)]
-        public int PhoneNumber { get; set; }
+        public string PhoneNumber { get; set; }
 
         [Required]
         public DateTime MoveInDate { get; set; }

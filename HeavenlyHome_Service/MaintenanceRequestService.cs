@@ -14,7 +14,7 @@ namespace HeavenlyHome_Service
 
         public MaintenanceRequestService(Guid userID)
         {
-            userID = _userID;
+             _userID = userID;
         }
 
         //Create MaintenanceRequest
@@ -25,11 +25,8 @@ namespace HeavenlyHome_Service
             {
                 var entity = new MaintenanceRequest
                 {
-                    UserID = _userID,
-                    ResidentID = model.ResidentID,
-                    Resident = ctx.Residents.Single(e => e.ResidentID == model.ResidentID),
-                    Category = model.Category,
-                    SubCategory = model.SubCategory,
+                    UserID = _userID,            
+                    Category = model.Category,               
                     Location = model.Location,
                     Description = model.Description,
                     Status = model.Status,
@@ -53,14 +50,11 @@ namespace HeavenlyHome_Service
                 var query =
                     ctx
                     .MaintenanceRequests
-                    .Where(e => e.RequestID >= 1)
+                    .Where(e => e.UserID == _userID )
                     .Select(e => new MaintenanceRequestListItem
                     {
                         RequestID = e.RequestID,
-                        ResidentID = e.ResidentID,
-                        Resident = e.Resident,
                         Category = e.Category,
-                        SubCategory = e.SubCategory,
                         Location = e.Location,
                         Description = e.Description,
                         Status = e.Status,
@@ -69,7 +63,7 @@ namespace HeavenlyHome_Service
                         
                     });
 
-                return query.ToList();
+                return query.ToArray();
             }
 
         }
@@ -82,12 +76,10 @@ namespace HeavenlyHome_Service
                 var entity =
                     ctx
                     .MaintenanceRequests
-                    .Single(e => e.RequestID == model.RequestID);
+                    .Single(e => e.RequestID == model.RequestID && e.UserID == _userID);
 
                 entity.RequestID = model.RequestID;
-                entity.ResidentID = model.ResidentID;
                 entity.Category = model.Category;
-                entity.SubCategory = model.SubCategory;
                 entity.Location = model.Location;
                 entity.Description = model.Description;
                 entity.Status = model.Status;
@@ -107,7 +99,7 @@ namespace HeavenlyHome_Service
                 var entity =
                     ctx
                     .MaintenanceRequests
-                    .Single(e => e.RequestID == id);
+                    .Single(e => e.RequestID == id && e.UserID == _userID);
                 ctx.MaintenanceRequests.Remove(entity);
                 return ctx.SaveChanges() == 1;
 
@@ -128,10 +120,7 @@ namespace HeavenlyHome_Service
                 return new MaintenanceRequestDetails
                 {
                     RequestID = entity.RequestID,
-                    ResidentID = entity.ResidentID,
-                    Resident = ctx.Residents.Single(e => e.ResidentID == entity.ResidentID),
                     Category = entity.Category,
-                    SubCategory = entity.SubCategory,
                     Location = entity.Location,
                     Description = entity.Description,
                     Status = entity.Status,

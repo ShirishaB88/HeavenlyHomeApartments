@@ -23,7 +23,7 @@ namespace HeavenlyHome_Data
         public string FullName { get; set; }
 
         [DataType(DataType.PhoneNumber)]
-        public int PhoneNumber { get; set; }
+        public string PhoneNumber { get; set; }
 
         [DataType(DataType.EmailAddress)]
         public string EmailAddress { get; set; }

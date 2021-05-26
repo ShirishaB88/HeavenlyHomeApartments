@@ -19,27 +19,11 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.ResidentID)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ResidentID)
-        </dd>
-
-        <dt>
             @Html.DisplayNameFor(model => model.Category)
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.Category)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.SubCategory)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.SubCategory)
         </dd>
 
         <dt>
@@ -86,5 +70,5 @@
 </div>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.RequestID }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Back to List", "Index", null, new {@class="btn btn-default"})
 </p>

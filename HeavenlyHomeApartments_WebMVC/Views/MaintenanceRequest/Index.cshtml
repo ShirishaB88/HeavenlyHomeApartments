@@ -4,7 +4,8 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Maintenance Requests</h2>
+
+<br />
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -20,24 +21,24 @@
         @TempData["SaveResult"]
     </div>
 }
+<h2>Maintenance Requests</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create", null, new { @class="btn btn-dark"})
+</p>
 
 <table class="table">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.RequestID)
         </th>
-        <th>
+        @*<th>
             @Html.DisplayNameFor(model => model.ResidentID)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Resident)
-        </th>
+        </th>*@
         <th>
             @Html.DisplayNameFor(model => model.Category)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.SubCategory)
-        </th>
+ 
         <th>
             @Html.DisplayNameFor(model => model.Location)
         </th>
@@ -62,18 +63,13 @@
             <td>
                 @Html.DisplayFor(modelItem => item.RequestID)
             </td>
-            <td>
+            @*<td>
                 @Html.DisplayFor(modelItem => item.ResidentID)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Resident.FullName)
-            </td>
+            </td>*@
             <td>
                 @Html.DisplayFor(modelItem => item.Category)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.SubCategory)
-            </td>
+  
             <td>
                 @Html.DisplayFor(modelItem => item.Location)
             </td>
