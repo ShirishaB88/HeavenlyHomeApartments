@@ -76,6 +76,14 @@
     <Compile Include="Migrations\202105261822486_ChangedApplicantPhoneNumberColumn.Designer.cs">
       <DependentUpon>202105261822486_ChangedApplicantPhoneNumberColumn.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202105262130059_ChangedResidentPhoneNumberColumn.cs" />
+    <Compile Include="Migrations\202105262130059_ChangedResidentPhoneNumberColumn.Designer.cs">
+      <DependentUpon>202105262130059_ChangedResidentPhoneNumberColumn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105262252456_ChangedMaintenaceRequestResidentColumn.cs" />
+    <Compile Include="Migrations\202105262252456_ChangedMaintenaceRequestResidentColumn.Designer.cs">
+      <DependentUpon>202105262252456_ChangedMaintenaceRequestResidentColumn.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Payment.cs" />
     <Compile Include="PaymentType.cs" />
@@ -221,6 +229,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202105261822486_ChangedApplicantPhoneNumberColumn.resx">
       <DependentUpon>202105261822486_ChangedApplicantPhoneNumberColumn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105262130059_ChangedResidentPhoneNumberColumn.resx">
+      <DependentUpon>202105262130059_ChangedResidentPhoneNumberColumn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105262252456_ChangedMaintenaceRequestResidentColumn.resx">
+      <DependentUpon>202105262252456_ChangedMaintenaceRequestResidentColumn.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

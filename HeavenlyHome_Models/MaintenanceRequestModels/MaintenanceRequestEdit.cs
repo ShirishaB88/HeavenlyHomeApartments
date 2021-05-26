@@ -11,12 +11,7 @@ namespace HeavenlyHome_Models.MaintenanceRequestModels
     {
         public int RequestID { get; set; }
 
-        public int ResidentID { get; set; }
-        public Resident Resident { get; set; }
-
         public Category Category { get; set; }
-
-        public List<string> SubCategory { get; set; }
         public Location Location { get; set; }
         public string Description { get; set; }
 

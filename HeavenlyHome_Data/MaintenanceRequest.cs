@@ -22,10 +22,6 @@ namespace HeavenlyHome_Data
 
         public Guid UserID { get; set; }
 
-        [ForeignKey(nameof(Resident))]
-        public int ResidentID { get; set; }
-        public Resident Resident { get; set; }
-
         [Required]
         [EnumDataType(typeof(Category))]
         public Category Category { get; set; }

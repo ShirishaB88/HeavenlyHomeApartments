@@ -17,7 +17,7 @@ namespace HeavenlyHome_Models.ResidentModels
 
         public string FullName { get; set; }
        
-        public int PhoneNumber { get; set; }
+        public string PhoneNumber { get; set; }
    
         public string EmailAddress { get; set; }
     }
