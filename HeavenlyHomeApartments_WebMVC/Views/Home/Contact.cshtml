@@ -1,17 +1,59 @@
 ﻿@{
     ViewBag.Title = "Contact";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
 
+<br />
+<div class="row">
+    <div class="col-md-4">
+        <img src="~/Content/themes/base/images/Logo.png" width="200" height="200" />
+
+    </div>
+    <div class="col-md-8">
+        <br />
+        <br />
+        <h2 class="text-danger text-center">Hello!</h2>
+        <h2 class="text-black-50">At Last, This Is What You’ve Been Searching For.</h2>
+    </div>
+</div>
+<hr />
+
+
+<h4>Address</h4>
 <address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
+    <a class="nav nav-tabs" href="#"> 1234 Starshine Ln Carmel,IN,46280 </a>
+
 </address>
 
-<address>
-    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
+
+<h4>Open</h4>
+<p>Monday - Friday: 9AM - 6PM</p>
+<p>Saturday:9AM - 5PM</p>
+<hr />
+
+<h4>Phone</h4>
+<a class="nav nav-tabs" href="tel:123-456-7890">123-456-7890</a>
+
+<h4>Contact US</h4>
+<form>
+    <div class="form-group">
+        <label >Full Name</label>
+        <input type="text" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+       
+    </div>
+    <div class="form-group m">
+        <label for="exampleInputPassword1">Message</label>
+        <textarea class="form-control" placeholder="*Your Message"></textarea>
+    </div>
+    <button type="submit" class="btn btn-danger">Submit</button>
+</form>
+<hr />
+
+
+
+
+
+

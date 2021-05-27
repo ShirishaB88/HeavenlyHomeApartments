@@ -1,0 +1,125 @@
+﻿@model IEnumerable<HeavenlyHome_Models.FloorPlanModels.FloorPlanListItem>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2 class="text-danger">Floorplans</h2>
+<hr />
+
+<p>
+    @Html.ActionLink("Create New", "Create", null, new { @class="btn btn-dark"})
+</p>
+
+@using (Html.BeginForm("Index", "FloorPlan", FormMethod.Get))
+ {
+    <p>
+        <b>SearchBy:</b>
+        @Html.RadioButton("SearchBy", "Beds") <text>No.Baths</text>
+        @Html.RadioButton("SearchBy", "Baths") <text>No.Beds</text>
+        @Html.RadioButton("SearchBy", "Garage") <text>No.Garage</text><br /><br />
+        @Html.TextBox("Search") <input type="submit" value="search" />
+    </p>
+ }
+
+
+@if (TempData.ContainsKey("SaveResult"))
+ {
+    <div class="alert alert-success fade in" role="alert">
+
+        <button type="button" class="close" data-dismiss="alert">
+            <span>&times;</span>
+        </button>
+        @TempData["SaveResult"]
+    </div>
+ }
+
+<table class="table table-bordered table-hover table-striped">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FloorPlanID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FloorPlanName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NoOfBeds)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NoOfBaths)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AreaInSqFt)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NoOfGarageSpaces)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Image)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsAvailable)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreatedDate)
+        </th>
+        <th>Action</th>
+    </tr>
+
+    @if (Model.Count() == 0)
+    {
+        <tr>
+            <td colspan="5">No rows match the search criteria</td>
+        </tr>
+    }
+    else
+    {
+        foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FloorPlanID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FloorPlanName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NoOfBeds)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NoOfBaths)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AreaInSqFt)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NoOfGarageSpaces)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Image)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IsAvailable)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CreatedDate)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.FloorPlanID }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.FloorPlanID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.FloorPlanID })
+                </td>
+            </tr>
+        }
+
+    }
+
+
+
+</table>

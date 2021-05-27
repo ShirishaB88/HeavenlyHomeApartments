@@ -20,10 +20,12 @@ namespace HeavenlyHome_Data
         [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
 
-        [DataType(DataType.Password)]
-        public string Password { get; set; }
-
         [DataType(DataType.PhoneNumber)]
-        public int PhoneNumber { get; set; }
+        public string PhoneNumber { get; set; }
+
+        [Required]
+        public DateTime MoveInDate { get; set; }
+        public string Requirements { get; set; }
+
     }
 }

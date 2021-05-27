@@ -1,0 +1,50 @@
+﻿@model HeavenlyHome_Models.AddressModels.AddressDetail
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>AddressDetail</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.AddressID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AddressID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FloorPlanID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FloorPlanID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FullAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FullAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsAvailable)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsAvailable)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.AddressID}) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
