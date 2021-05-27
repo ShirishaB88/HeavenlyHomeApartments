@@ -26,7 +26,7 @@
                     <li>@Html.ActionLink("Features", "Features", "Home", null, new { @class = "btn btn-dark" }))</li>
                     <li>@Html.ActionLink("Photos", "Photos", "Home", null, new { @class = "btn btn-dark" }))</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home", null, new { @class = "btn btn-dark" }))</li>
-                    <li>@Html.ActionLink("ApplyNow", "Index", "Applicant", null, new { @class = "btn btn-dark" }))</li>
+                    <li>@Html.ActionLink("Apply Now", "Index", "Applicant", null, new { @class = "btn btn-dark" }))</li>
 
                     @if (User.IsInRole("Applicant"))
                     {
@@ -36,12 +36,12 @@
 
                     @if (User.IsInRole("Manager"))
                     {
-                        <li>@Html.ActionLink("ManagementPortal", "Index", "ManagementPortal", null, new { @class = "btn btn-dark" }))</li>
+                        <li>@Html.ActionLink("Management Portal", "Index", "ManagementPortal", null, new { @class = "btn btn-dark" }))</li>
                     }
 
                     @if (User.IsInRole("Resident"))
                     {
-                        <li>@Html.ActionLink("ResidentPortal", "Index", "ResidentPortal", null, new { @class = "btn btn-dark" }))</li>
+                        <li>@Html.ActionLink("Resident Portal", "Index", "ResidentPortal", null, new { @class = "btn btn-dark" }))</li>
                     }
                 </ul>
                 @Html.Partial("_LoginPartial")

@@ -26,7 +26,7 @@ namespace HeavenlyHomeApartments_WebMVC.Controllers
 
             if(searchBy == "Name")
             {
-                return View(model.Where(e => e.FullName.StartsWith(search)));
+                return View(model.Where(e => e.FullName.ToLower().StartsWith(search.ToLower())));
             }
             else if (searchBy == "ID")
             {
